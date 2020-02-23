@@ -8,6 +8,18 @@ Project structure:
 * *test-results*: Output from the tests.
 * *monitored_ab_stress.sh*: Script to run a given command, attach a monitoring tool to the process  and run Apache Bench test against a given URL.
 
+## Setup
+
+Install the JDKs using [Jabba](https://github.com/shyiko/jabba).
+
+```
+jabba install adopt@1.11.0-6
+jabba install adopt-openj9@1.11.0-6
+jabba install zulu@1.11.0-6
+jabba install amazon-corretto@1.11.0-6.10.1
+jabba install graalvm@19.3.1
+```
+
 ## Build the App
 
 First build the app with: `sh build_app.sh`.
@@ -22,6 +34,7 @@ Environments variables:
 * JAVAj11_HOME: OpenJ9 11
 * JAVAg11_HOME: GraalVM 11
 * JAVAz11_HOME: Zulu 11
+* JAVAa11_HOME: Amazon Corretto 11
 
 ## Partial Results
 
@@ -81,18 +94,35 @@ OpenJDK 64-Bit Server VM Zulu11.37+17-CA (build 11.0.6+10-LTS, mixed mode)
 ```
 
 ```
+Time to start the server: 4 s
+Total CPU time used at startup: 12270 s
+Time to finish the test: 2 s
+```
+
+![Resources](test-results/output-zulu-11/zulu-11.png)
+
+### Amazon Correto 11
+
+```
+openjdk version "11.0.6" 2020-01-14 LTS
+OpenJDK Runtime Environment Corretto-11.0.6.10.1 (build 11.0.6+10-LTS)
+OpenJDK 64-Bit Server VM Corretto-11.0.6.10.1 (build 11.0.6+10-LTS, mixed mode)
+```
+
+```
 Time to start the server: 3 s
 Total CPU time used at startup: 8000 s
 Time to finish the test: 2 s
 ```
 
-![Resources](test-results/output-zulu-11/zulu-11.png)
+![Resources](test-results/output-corretto-11/corretto-11.png)
 
 ## TODO
 
 * [x] HotSpot VM 11
 * [x] OpenJ9 VM 11
 * [x] Zulu VM 11
+* [x] Amazon Corretto
 * [ ] GraalVM 11
 * [ ] Increase the load
 
@@ -101,3 +131,4 @@ Time to finish the test: 2 s
 * [OpenJ9](https://www.eclipse.org/openj9/)
 * [GraalVM](https://www.graalvm.org/)
 * [Zulu VM](https://www.azul.com/downloads/zulu-community)
+* [Amazon Corretto](https://aws.amazon.com/pt/corretto/)
