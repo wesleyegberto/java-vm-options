@@ -1,0 +1,4 @@
+openjdk 11.0.6 2020-01-14 OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.6+10) Eclipse OpenJ9 VM AdoptOpenJDK (build openj9-0.18.1, JRE 11 Mac OS X amd64-64-Bit Compressed References 20200122_450 (JIT enabled, AOT enabled) OpenJ9 - 51a5857d2 OMR - 7a1b0239a JCL - da35e0c380 based on jdk-11.0.6+10)
+Time to start the server: 3 s
+Total CPU time used at startup: 3870 s
+Time to finish the test: 2 s

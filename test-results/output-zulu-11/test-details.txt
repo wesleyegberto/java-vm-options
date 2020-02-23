@@ -1,0 +1,4 @@
+openjdk 11.0.6 2020-01-14 LTS OpenJDK Runtime Environment Zulu11.37+17-CA (build 11.0.6+10-LTS) OpenJDK 64-Bit Server VM Zulu11.37+17-CA (build 11.0.6+10-LTS, mixed mode)
+Time to start the server: 3 s
+Total CPU time used at startup: 8000 s
+Time to finish the test: 2 s
