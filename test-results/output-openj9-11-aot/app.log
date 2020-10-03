@@ -1,0 +1,24 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v2.1.17.RELEASE)
+
+2020-10-03 18:25:44.837  INFO 15533 --- [           main] c.github.wesleyegberto.HelloApplication  : Starting HelloApplication v0.0.1-SNAPSHOT on Mac-Nebuchadnezzar.local with PID 15533 (java-vm-options/hello-app/target/spring-boot-hello-app.jar started by wesley in java-vm-options)
+2020-10-03 18:25:44.838  INFO 15533 --- [           main] c.github.wesleyegberto.HelloApplication  : No active profile set, falling back to default profiles: default
+2020-10-03 18:25:45.775  INFO 15533 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-03 18:25:45.804  INFO 15533 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-03 18:25:45.804  INFO 15533 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-03 18:25:45.858  INFO 15533 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-03 18:25:45.858  INFO 15533 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 999 ms
+2020-10-03 18:25:46.231  INFO 15533 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-03 18:25:46.390  INFO 15533 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-03 18:25:46.444  INFO 15533 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-03 18:25:46.446  INFO 15533 --- [           main] c.github.wesleyegberto.HelloApplication  : Started HelloApplication in 2.065 seconds (JVM running for 2.317)
+2020-10-03 18:25:46.672  INFO 15533 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-03 18:25:46.672  INFO 15533 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-03 18:25:46.676  INFO 15533 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-10-03 18:25:49.912  INFO 15533 --- [       Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

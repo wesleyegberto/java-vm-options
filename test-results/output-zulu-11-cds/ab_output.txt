@@ -13,29 +13,29 @@ Document Path:          /greetings
 Document Length:        26 bytes
 
 Concurrency Level:      5
-Time taken for tests:   1.935 seconds
+Time taken for tests:   1.538 seconds
 Complete requests:      5000
 Failed requests:        0
 Total transferred:      725000 bytes
 HTML transferred:       130000 bytes
-Requests per second:    2584.48 [#/sec] (mean)
-Time per request:       1.935 [ms] (mean)
-Time per request:       0.387 [ms] (mean, across all concurrent requests)
-Transfer rate:          365.97 [Kbytes/sec] received
+Requests per second:    3251.73 [#/sec] (mean)
+Time per request:       1.538 [ms] (mean)
+Time per request:       0.308 [ms] (mean, across all concurrent requests)
+Transfer rate:          460.45 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1   0.3      1       7
-Processing:     0    1   0.7      1      15
-Waiting:        0    1   0.6      1      14
-Total:          1    2   0.8      2      15
+Connect:        0    0   0.1      0       1
+Processing:     0    1   0.9      1      15
+Waiting:        0    1   0.7      1      14
+Total:          0    1   0.9      1      15
 
 Percentage of the requests served within a certain time (ms)
-  50%      2
+  50%      1
   66%      2
   75%      2
   80%      2
-  90%      3
+  90%      2
   95%      3
   98%      4
   99%      4

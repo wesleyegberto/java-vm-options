@@ -8,6 +8,13 @@ Project structure:
 * *test-results*: Output from the tests.
 * *monitored_ab_stress.sh*: Script to run a given command, attach a monitoring tool to the process  and run Apache Bench test against a given URL.
 
+The result folde for each one contains:
+
+* ApacheBench output
+* Application log (to see the startup time taken)
+* `psrecord` output and graph
+* file with version of the JVM
+
 ## Setup
 
 Install the JDKs using [Jabba](https://github.com/shyiko/jabba).
@@ -31,10 +38,10 @@ Test the app: `curl http://localhost:8080/greetings`
 Environments variables:
 
 * JAVA11_HOME: HotSpot 11
-* JAVAj11_HOME: OpenJ9 11
+* JAVAo11_HOME: OpenJ9 11
 * JAVAg11_HOME: GraalVM 11
 * JAVAz11_HOME: Zulu 11
-* JAVAa11_HOME: Amazon Corretto 11
+* JAVAc11_HOME: Amazon Corretto 11
 
 ## Partial Results
 
@@ -46,13 +53,25 @@ Java(TM) SE Runtime Environment 18.9 (build 11.0.1+13-LTS)
 Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)
 ```
 
+#### Vanilla
+
 ```
 Time to start the server: 4 s
-Total CPU time used at startup: 14050 s
-Time to finish the test: 2 s
+Total CPU time used at startup: 16040 s
+Time to finish the test: 3 s
 ```
 
 ![Resources](test-results/output-hotspot-11/hotspot-11.png)
+
+#### CDS
+
+```
+Time to start the server: 4 s
+Total CPU time used at startup: 16570 s
+Time to finish the test: 2 s
+```
+
+![Resources](test-results/output-hotspot-11-cds/hotspot-11-cds.png)
 
 ### OpenJ9 11
 
@@ -68,19 +87,29 @@ JCL      - da35e0c380 based on jdk-11.0.6+10)
 #### Vanilla
 
 ```
-Time to start the server: 4 s
-Total CPU time used at startup: 7590 s
-Time to finish the test: 2 s
+Time to start the server: 5 s
+Total CPU time used at startup: 11770 s
+Time to finish the test: 3 s
 ```
 
 ![Resources](test-results/output-openj9-11/openj9-11.png)
 
-#### Tuned and Prewarmed
+#### [AOT](https://www.eclipse.org/openj9/docs/aot/)
 
 ```
-Time to start the server: 3 s
-Total CPU time used at startup: 3870 s
-Time to finish the test: 2 s
+Time to start the server: 2 s
+Total CPU time used at startup: 3570 s
+Time to finish the test: 1 s
+```
+
+![Resource](test-results/output-openj9-11-aot/openj9-11-aot.png)
+
+#### [AOT](https://www.eclipse.org/openj9/docs/aot/) and [JIT](https://www.eclipse.org/openj9/docs/jit/)
+
+```
+Time to start the server: 2 s
+Total CPU time used at startup: 3400 s
+Time to finish the test: 1 s
 ```
 
 ![Resource](test-results/output-openj9-11-tuned/openj9-11-tuned.png)
@@ -93,13 +122,25 @@ OpenJDK Runtime Environment Zulu11.37+17-CA (build 11.0.6+10-LTS)
 OpenJDK 64-Bit Server VM Zulu11.37+17-CA (build 11.0.6+10-LTS, mixed mode)
 ```
 
+#### Vanilla
+
 ```
 Time to start the server: 4 s
-Total CPU time used at startup: 12270 s
+Total CPU time used at startup: 15820 s
 Time to finish the test: 2 s
 ```
 
 ![Resources](test-results/output-zulu-11/zulu-11.png)
+
+#### CDS
+
+```
+Time to start the server: 4 s
+Total CPU time used at startup: 14540 s
+Time to finish the test: 1 s
+```
+
+![Resources](test-results/output-zulu-11-cds/zulu-11-cds.png)
 
 ### Amazon Correto 11
 
@@ -109,13 +150,25 @@ OpenJDK Runtime Environment Corretto-11.0.6.10.1 (build 11.0.6+10-LTS)
 OpenJDK 64-Bit Server VM Corretto-11.0.6.10.1 (build 11.0.6+10-LTS, mixed mode)
 ```
 
+#### Vanilla
+
 ```
 Time to start the server: 3 s
-Total CPU time used at startup: 8000 s
-Time to finish the test: 2 s
+Total CPU time used at startup: 15620 s
+Time to finish the test: 1 s
 ```
 
 ![Resources](test-results/output-corretto-11/corretto-11.png)
+
+#### CDS
+
+```
+Time to start the server: 4 s
+Total CPU time used at startup: 15640 s
+Time to finish the test: 1 s
+```
+
+![Resources](test-results/output-corretto-11-cds/corretto-11-cds.png)
 
 ## TODO
 
@@ -129,6 +182,7 @@ Time to finish the test: 2 s
 ## Links
 
 * [OpenJ9](https://www.eclipse.org/openj9/)
+* [OpenJ9 CDS](https://developer.ibm.com/components/java-platform/tutorials/j-class-sharing-openj9)
 * [GraalVM](https://www.graalvm.org/)
 * [Zulu VM](https://www.azul.com/downloads/zulu-community)
 * [Amazon Corretto](https://aws.amazon.com/pt/corretto/)

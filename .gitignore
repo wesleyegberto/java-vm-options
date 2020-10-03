@@ -32,4 +32,8 @@ build/
 .vscode/
 
 taurus/output/
-*.log
+
+### Dumps ###
+*.lst
+*.jsa
+C290M11*
