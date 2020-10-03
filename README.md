@@ -55,21 +55,9 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)
 
 #### Vanilla
 
-```
-Time to start the server: 4 s
-Total CPU time used at startup: 16040 s
-Time to finish the test: 3 s
-```
-
 ![Resources](test-results/output-hotspot-11/hotspot-11.png)
 
 #### CDS
-
-```
-Time to start the server: 4 s
-Total CPU time used at startup: 16570 s
-Time to finish the test: 2 s
-```
 
 ![Resources](test-results/output-hotspot-11-cds/hotspot-11-cds.png)
 
@@ -86,31 +74,13 @@ JCL      - da35e0c380 based on jdk-11.0.6+10)
 
 #### Vanilla
 
-```
-Time to start the server: 5 s
-Total CPU time used at startup: 11770 s
-Time to finish the test: 3 s
-```
-
 ![Resources](test-results/output-openj9-11/openj9-11.png)
 
 #### [AOT](https://www.eclipse.org/openj9/docs/aot/)
 
-```
-Time to start the server: 2 s
-Total CPU time used at startup: 3570 s
-Time to finish the test: 1 s
-```
-
 ![Resource](test-results/output-openj9-11-aot/openj9-11-aot.png)
 
 #### [AOT](https://www.eclipse.org/openj9/docs/aot/) and [JIT](https://www.eclipse.org/openj9/docs/jit/)
-
-```
-Time to start the server: 2 s
-Total CPU time used at startup: 3400 s
-Time to finish the test: 1 s
-```
 
 ![Resource](test-results/output-openj9-11-tuned/openj9-11-tuned.png)
 
@@ -124,21 +94,9 @@ OpenJDK 64-Bit Server VM Zulu11.37+17-CA (build 11.0.6+10-LTS, mixed mode)
 
 #### Vanilla
 
-```
-Time to start the server: 4 s
-Total CPU time used at startup: 15820 s
-Time to finish the test: 2 s
-```
-
 ![Resources](test-results/output-zulu-11/zulu-11.png)
 
 #### CDS
-
-```
-Time to start the server: 4 s
-Total CPU time used at startup: 14540 s
-Time to finish the test: 1 s
-```
 
 ![Resources](test-results/output-zulu-11-cds/zulu-11-cds.png)
 
@@ -152,21 +110,9 @@ OpenJDK 64-Bit Server VM Corretto-11.0.6.10.1 (build 11.0.6+10-LTS, mixed mode)
 
 #### Vanilla
 
-```
-Time to start the server: 3 s
-Total CPU time used at startup: 15620 s
-Time to finish the test: 1 s
-```
-
 ![Resources](test-results/output-corretto-11/corretto-11.png)
 
 #### CDS
-
-```
-Time to start the server: 4 s
-Total CPU time used at startup: 15640 s
-Time to finish the test: 1 s
-```
 
 ![Resources](test-results/output-corretto-11-cds/corretto-11-cds.png)
 
